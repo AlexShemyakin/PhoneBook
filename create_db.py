@@ -1,4 +1,7 @@
 import mariadb
+import os
+import sys
+import PyInstaller
 
 class create_db():
     conn = mariadb.connect(
@@ -33,7 +36,10 @@ class create_db():
                 "date DATE, "
                 "PRIMARY KEY (id))")
     conn.commit()
+    print('Database is created')
+    input()
 
 if __name__ == '__main__':
     create_db()
+
 
